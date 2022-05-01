@@ -17,7 +17,7 @@ on:
 jobs:
   build0:
 #     runs-on: ubuntu-latest
-    runs-on: ${{ matrix.os }}
+    runs-on: ubuntu-latest # ${{ matrix.os }}
     strategy:
       matrix: 
         node-version: [8.x] # , 10.x, 12.x
@@ -31,11 +31,23 @@ jobs:
           ls -l
           
       # Run Linter against code base
+      
+      ##########################
+      # Checkout the code base #
+      ##########################
+      - name: Checkout Code
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+      ################################
+      # Run Linter against code base #
+      ################################
       - name: Lint Code Base
-        uses: docker://github/super-linter:v3
+        uses: github/super-linter@v4
         env:
           VALIDATE_ALL_CODEBASE: false
           DEFAULT_BRANCH: master
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}    
         
       
     
