@@ -14,6 +14,17 @@ on:
   workflow_dispatch:
 
 jobs:
+  dev:
+    runs-on: ubuntu-18.04
+    environment:
+      name: dev
+      url: 'http://dev.myapp.com'
+    steps:
+      - name: development
+        run: |
+          echo I am in dev environment
+      
+
   build:
     runs-on: ubuntu-18.04
     
