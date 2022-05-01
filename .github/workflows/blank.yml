@@ -22,7 +22,7 @@ jobs:
       - uses: actions/checkout@v2
       - name: test run
         run: |
-          echo 'this is a test run on ${{ matrix.os }}'
+          echo 'this is a test run on ubuntu-latest'
           ls -l
           
       # Run Linter against code base
