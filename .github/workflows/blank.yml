@@ -18,12 +18,12 @@ jobs:
   build0:
     runs-on: ubtuntu-latest
     
-  steps:
-    - uses: actions/checkout@v2
-    - names: test run
-      run: |
-        echo 'this is a test run'
-        ls -l
+    steps:
+      - uses: actions/checkout@v2
+      - name: test run
+        run: |
+          echo 'this is a test run'
+          ls -l
       
     
 
