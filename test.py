@@ -4,5 +4,5 @@ np.random.random(1000)
 
 print('hello world!')
 
-def abc()
+def abc():
   print('hello world!')
