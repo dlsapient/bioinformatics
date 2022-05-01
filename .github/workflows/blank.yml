@@ -24,7 +24,7 @@ jobs:
     steps:
       - name: development
         run: |
-          echo I am in dev environment and the secret is $SECRETS_CONTENT. 
+          echo "I am in dev environment and the secret is $SECRETS_CONTENT." 
       
 
   build:
