@@ -22,7 +22,7 @@ jobs:
     steps:
       - name: development
         run: |
-          echo I am in dev environment
+          echo I am in dev environment and the secret is ${{ dev.SECRET }}. 
       
 
   build:
