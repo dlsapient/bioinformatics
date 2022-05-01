@@ -19,10 +19,12 @@ jobs:
     environment:
       name: dev
       url: 'http://dev.myapp.com'
+    env:
+      SECRETS_CONTENT: ${{ secrets.SECRET }}  
     steps:
       - name: development
         run: |
-          echo I am in dev environment and the secret is ${{ dev.SECRET }}. 
+          echo I am in dev environment and the secret is $SECRETS_CONTENT. 
       
 
   build:
