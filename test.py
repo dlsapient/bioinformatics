@@ -5,4 +5,4 @@ np.random.random(1000)
 print('hello world!')
 
 def abc()
-  print('hell0')
+  print('hello world!')
