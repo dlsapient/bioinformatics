@@ -15,7 +15,7 @@ on:
 
 jobs:
   dev:
-    runs-on: ubuntu-18.04
+    runs-on: ubuntu-latest
     environment:
       name: dev
       url: 'http://dev.myapp.com'
